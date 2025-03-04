@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @Osama01Anwar
 - 👀 I’m interested in Cyber security
-- 🌱 I’m currently learning c++
 - 💞️ I’m looking to collaborate on anything i know for sure
 
 

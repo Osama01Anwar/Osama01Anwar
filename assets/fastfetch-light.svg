@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="336" viewBox="0 0 880 336" role="img" aria-labelledby="t d">
+  <title id="t">System information panel for Osama Anwar</title>
+  <desc id="d">A fastfetch-style panel beside a camera aperture drawn in block characters. Host Windows 11, WSL2 and Linux. Shell PowerShell and bash. Current role Database Administrator at The Bank of Punjab. Previous role Camera and Image Evaluation Engineer. 32 public repositories containing 500 tracked files. Languages Python, HTML, CSS, JavaScript and Inno Setup.</desc>
+  <rect x="0.5" y="0.5" width="879" height="335" rx="10"
+        fill="#0D1117" stroke="#AFB8C1" stroke-width="1"/>
+  <path d="M0.5 10.5a10 10 0 0 1 10-10h859a10 10 0 0 1 10 10V34H0.5z"
+        fill="#161B22"/>
+  <line x1="0.5" y1="34" x2="879.5" y2="34" stroke="#AFB8C1" stroke-width="1"/>
+  <circle cx="20" cy="17.5" r="5" fill="#F85149"/>
+  <circle cx="38" cy="17.5" r="5" fill="#E3B341"/>
+  <circle cx="56" cy="17.5" r="5" fill="#3FB950"/>
+<text x="440.0" y="22" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="normal" fill="#8B949E" text-anchor="middle" xml:space="preserve">osama@github: ~ — fastfetch</text>
+
+<defs><linearGradient id="lens" x1="0" y1="0" x2="0.35" y2="1">
+    <stop offset="0" stop-color="#2DD4BF"/><stop offset="1" stop-color="#3FB950"/>
+  </linearGradient></defs>
+<text x="38" y="130" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve">    ▄▄▄▄▄▄▄▄▄</text>
+<text x="38" y="146" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve">  ▄███████████▄</text>
+<text x="38" y="162" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve"> ████▀     ▀████</text>
+<text x="38" y="178" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve">████▀   ▄   ▀████</text>
+<text x="38" y="194" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve">███    ███    ███</text>
+<text x="38" y="210" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve">████▄   ▀   ▄████</text>
+<text x="38" y="226" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve"> ████▄     ▄████</text>
+<text x="38" y="242" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve">  ▀███████████▀</text>
+<text x="38" y="258" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="16" font-weight="normal" fill="url(#lens)" xml:space="preserve">    ▀▀▀▀▀▀▀▀▀</text>
+<text x="236" y="74" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700" xml:space="preserve"><tspan fill="#3FB950">osama</tspan><tspan fill="#8B949E">@</tspan><tspan fill="#2DD4BF">github</tspan></text>
+<line x1="236" y1="86" x2="852" y2="86" stroke="#21262D" stroke-width="1"/>
+<text x="236" y="108" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Host</text>
+<text x="352" y="108" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#C9D1D9">Windows 11</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#C9D1D9">WSL2</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#C9D1D9">Linux</tspan></text>
+<text x="236" y="128" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Shell</text>
+<text x="352" y="128" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#C9D1D9">PowerShell</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#C9D1D9">bash</tspan></text>
+<text x="236" y="148" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Editor</text>
+<text x="352" y="148" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#C9D1D9">VS Code</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#C9D1D9">Git</tspan></text>
+<text x="236" y="168" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Role</text>
+<text x="352" y="168" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#BC8CFF">Database Administrator</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#8B949E">The Bank of Punjab</tspan></text>
+<text x="236" y="188" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Previous</text>
+<text x="352" y="188" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#E3B341">Camera / Image Evaluation Engineer</tspan></text>
+<text x="236" y="208" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Repos</text>
+<text x="352" y="208" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#2DD4BF">32 public</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#8B949E">500 tracked files</tspan></text>
+<text x="236" y="228" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Languages</text>
+<text x="352" y="228" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#58A6FF">Python</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#FF8C42">HTML</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#BC8CFF">CSS</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#E3B341">JavaScript</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#3FB950">Inno Setup</tspan></text>
+<text x="236" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Surface</text>
+<text x="352" y="248" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#3FB950">CLI</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#3FB950">desktop GUI</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#3FB950">diagnostics</tspan></text>
+<text x="236" y="268" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Domains</text>
+<text x="352" y="268" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#C9D1D9">QA</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#C9D1D9">camera IQ</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#C9D1D9">database ops</tspan><tspan fill="#8B949E">  ·  </tspan><tspan fill="#C9D1D9">networking</tspan></text>
+<text x="236" y="288" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" fill="#8B949E" xml:space="preserve">Uptime</text>
+<text x="352" y="288" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="normal" xml:space="preserve"><tspan fill="#8B949E">since 2021-11-03</tspan></text>
+</svg>

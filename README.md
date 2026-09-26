@@ -9,7 +9,7 @@
 
 </div>
 
-## `$ whoami`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-whoami-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-whoami-light.svg"><img src="assets/sec-whoami-dark.svg" alt="$ whoami" width="100%"></picture>
 
 ```console
 $ whoami --verbose
@@ -30,7 +30,7 @@ Day to day I administer Oracle databases. Before that I evaluated camera image q
 against physical devices for a phone manufacturer. Both are on this page, but neither
 is the whole picture.
 
-## `$ neofetch`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-neofetch-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-neofetch-light.svg"><img src="assets/sec-neofetch-dark.svg" alt="$ neofetch" width="100%"></picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/fastfetch-dark.svg">
@@ -39,7 +39,7 @@ is the whole picture.
        alt="System panel beside a wireframe torus rendered in 3D. Windows 11, WSL2 and Linux. PowerShell and bash. Database Administrator at The Bank of Punjab; previously Camera and Image Evaluation Engineer. 32 public repositories, 500 tracked files. Languages Python, HTML, CSS, JavaScript, Inno Setup.">
 </picture>
 
-## `$ experience --timeline`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-experience-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-experience-light.svg"><img src="assets/sec-experience-dark.svg" alt="$ experience --timeline" width="100%"></picture>
 
 ```console
 $ experience --timeline
@@ -64,7 +64,7 @@ $ experience --timeline
 2020 ──●  BSc Software Engineering · Iqra National University   (2024, CGPA 3.21)
 ```
 
-## `$ stack --inspect`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-stack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-stack-light.svg"><img src="assets/sec-stack-dark.svg" alt="$ stack --inspect" width="100%"></picture>
 
 > **Evidence key** — ● present in this GitHub account, with the repository named.
 > ○ professional or training experience that is **not** represented in these
@@ -123,7 +123,7 @@ QUALITY · BUILD · RELEASE
 └── Jira ................... ○  defect tracking and release validation
 ```
 
-## `$ languages --scan`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-languages-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-languages-light.svg"><img src="assets/sec-languages-dark.svg" alt="$ languages --scan" width="100%"></picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
@@ -144,7 +144,7 @@ would let the profile inflate the very numbers it publishes. Neither podium is a
 score, and no number on this page is hand-written — see
 [`assets/build_assets.py`](assets/build_assets.py).
 
-## `$ repo --matrix`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-matrix-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-matrix-light.svg"><img src="assets/sec-matrix-dark.svg" alt="$ repo --matrix" width="100%"></picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/matrix-dark.svg">
@@ -160,7 +160,7 @@ chart above needs a log scale to say anything useful. The three flat grey plates
 with no classified code. Projected through
 [`assets/geom3d.py`](assets/geom3d.py), not drawn by hand.
 
-## `$ projects --list`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-projects-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-projects-light.svg"><img src="assets/sec-projects-dark.svg" alt="$ projects --list" width="100%"></picture>
 
 ```console
 $ projects --list --sort=weight
@@ -213,7 +213,7 @@ $ projects --list --sort=weight
      and a set of early web exercises from 2023-2024.
 ```
 
-## `$ project inspect camera-count-tool`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-inspect-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-inspect-light.svg"><img src="assets/sec-inspect-dark.svg" alt="$ project inspect camera-count-tool" width="100%"></picture>
 
 ```console
 $ project inspect camera-count-tool
@@ -259,7 +259,7 @@ $ camera-count detect | inspect | count | exif FILE | report | supported
 REPOSITORY   https://github.com/Osama01Anwar/camera-count-tool
 ```
 
-## `$ qa --profile`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-qa-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-qa-light.svg"><img src="assets/sec-qa-dark.svg" alt="$ qa --profile" width="100%"></picture>
 
 > ○ Professional experience at Transsion Holdings / Carlcare. It is not
 > represented in this account's repositories - the test engineering below it is.
@@ -289,7 +289,7 @@ TOOLS
 └── Git, GitHub Actions ....... ● version control and CI
 ```
 
-## `$ camera --diagnostics`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-camera-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-camera-light.svg"><img src="assets/sec-camera-dark.svg" alt="$ camera --diagnostics" width="100%"></picture>
 
 ```console
 $ camera --diagnostics
@@ -319,7 +319,7 @@ camera-count-tool is the rule I took from that work, written down: read the
 value from a documented source and cite it, or report it as unavailable.
 ```
 
-## `$ db --status`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-db-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-db-light.svg"><img src="assets/sec-db-dark.svg" alt="$ db --status" width="100%"></picture>
 
 ```console
 $ db --status
@@ -341,7 +341,7 @@ IN THIS ACCOUNT                                              ● evidenced
     in camera-count-tool (src/camera_count/db/)
 ```
 
-## `$ security --environment`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-security-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-security-light.svg"><img src="assets/sec-security-dark.svg" alt="$ security --environment" width="100%"></picture>
 
 ```console
 $ security --environment
@@ -365,7 +365,7 @@ WRITTEN AND PUBLISHED                   ● evidenced
                          on any network import
 ```
 
-## `$ tools --inventory`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-tools-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-tools-light.svg"><img src="assets/sec-tools-dark.svg" alt="$ tools --inventory" width="100%"></picture>
 
 ```console
 $ tools --inventory
@@ -380,7 +380,7 @@ AI-ASSISTED   Claude Code, Codex - used on camera-count-tool, which carries
               a CLAUDE.md describing how that work is constrained
 ```
 
-## `$ image --profile`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-image-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-image-light.svg"><img src="assets/sec-image-dark.svg" alt="$ image --profile" width="100%"></picture>
 
 ```console
 $ image --profile
@@ -400,7 +400,7 @@ Photography is where the interest started; the camera work and the imaging
 repositories are what it turned into.
 ```
 
-## `$ workflow --execute`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-workflow-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-workflow-light.svg"><img src="assets/sec-workflow-dark.svg" alt="$ workflow --execute" width="100%"></picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
@@ -409,7 +409,7 @@ repositories are what it turned into.
        alt="Seven isometric blocks in a row: spec, build, test, measure, debug, verify, ship, with a dashed regression path returning from verify to build.">
 </picture>
 
-## `$ credentials --list`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-credentials-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-credentials-light.svg"><img src="assets/sec-credentials-dark.svg" alt="$ credentials --list" width="100%"></picture>
 
 ```console
 $ credentials --list
@@ -421,7 +421,7 @@ AWARD
 └── Huawei Next Image Award - Pakistan National Winner, 2021
 ```
 
-## `$ contact --connect`
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/sec-contact-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/sec-contact-light.svg"><img src="assets/sec-contact-dark.svg" alt="$ contact --connect" width="100%"></picture>
 
 [**GitHub**](https://github.com/Osama01Anwar) ·
 [**LinkedIn**](https://linkedin.com/in/osama-anwar-4b6a14199/) ·

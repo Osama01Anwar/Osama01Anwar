@@ -40,6 +40,10 @@ LANG_BREADTH: dict[str, int] = {"Python": 11, "HTML": 9, "JavaScript": 6, "CSS":
 PUBLIC_REPOS = 32
 TRACKED_FILES = 500
 
+# Swiss-grotesque display face. SVGs embedded via <img> cannot load webfonts,
+# so this must resolve from the system: Helvetica Neue on macOS, Arial on
+# Windows, Liberation Sans (Arial-metric) on Linux.
+DISPLAY = "'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Segoe UI', sans-serif"
 MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace"
 
 
@@ -209,14 +213,20 @@ def extruded(x: float, y: float, s: str, size: float, face: str, side: str,
 
 
 def build_header(t: Theme) -> str:
-    w, h, horizon = 880, 470, 252
+    """Swiss technical masthead over the 3D scene.
+
+    Display type is the grotesque; commands and figures stay monospace so the
+    page still reads as a terminal rather than as a poster pastiche.
+    """
+    w, h, horizon = 880, 486, 268
     void = "#04070C" if t.name == "dark" else "#05090F"
+    L, R = 30, w - 30
     b = [f'<rect width="{w}" height="{h}" rx="10" fill="{void}"/>']
 
     b.append(f'''<defs>
     <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="{t.cyan}" stop-opacity="0.30"/>
-      <stop offset="0.55" stop-color="{t.blue}" stop-opacity="0.07"/>
+      <stop offset="0" stop-color="{t.cyan}" stop-opacity="0.26"/>
+      <stop offset="0.55" stop-color="{t.blue}" stop-opacity="0.06"/>
       <stop offset="1" stop-color="{t.cyan}" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
@@ -226,91 +236,90 @@ def build_header(t: Theme) -> str:
     </linearGradient>
     <linearGradient id="hz" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="{t.cyan}" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="{t.cyan}" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="{t.cyan}" stop-opacity="0.8"/>
       <stop offset="1" stop-color="{t.cyan}" stop-opacity="0"/>
     </linearGradient>
     <clipPath id="floor"><rect x="1" y="{horizon}" width="{w - 2}" height="{h - horizon - 1}"/></clipPath>
     <clipPath id="card"><rect x="0" y="0" width="{w}" height="{h}" rx="10"/></clipPath>
   </defs>''')
+    b.append('<g clip-path="url(#card)">')
+    b.append(f'<ellipse cx="744" cy="150" rx="215" ry="165" fill="url(#halo)"/>')
 
-    b.append(f'<g clip-path="url(#card)">')
-    b.append(f'<ellipse cx="690" cy="150" rx="250" ry="185" fill="url(#halo)"/>')
-
-    # Static starfield - deterministic, so rebuilds produce an identical file.
     seed = 1337
     stars = []
-    for _ in range(58):
-        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF
-        sx = seed % w
-        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF
-        sy = seed % (horizon - 40) + 20
-        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF
-        op = 0.10 + (seed % 40) / 130
-        stars.append(f'<circle cx="{sx}" cy="{sy}" r="{0.8 if op > 0.28 else 0.6}" '
-                     f'fill="{t.text}" opacity="{op:.2f}"/>')
+    for _ in range(46):
+        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF; sx = seed % w
+        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF; sy = seed % (horizon - 60) + 40
+        seed = (seed * 1103515245 + 12345) & 0x7FFFFFFF; op = 0.10 + (seed % 40) / 140
+        stars.append(f'<circle cx="{sx}" cy="{sy}" r="0.7" fill="{t.text}" opacity="{op:.2f}"/>')
     b.append("".join(stars))
 
     b.append(f'<g clip-path="url(#floor)">{persp_grid(t, 440, horizon, h, 300, 0.95, 0.62, 13, 34)}</g>')
     b.append(f'<rect x="0" y="{horizon}" width="{w}" height="120" fill="url(#fade)"/>')
     b.append(f'<rect x="0" y="{horizon - 0.8}" width="{w}" height="1.6" fill="url(#hz)"/>')
 
-    # Wireframe icosahedron, rotated in 3D across the keyframes.
     verts, edges = g3.icosahedron()
-    edge_d, dot_d = wire_frames(verts, edges, 700, 146, 96, math.radians(-16), 26)
-    loop = lambda seq: [*seq, seq[0]]
-    b.append(f'<circle cx="700" cy="146" r="104" fill="none" stroke="{t.cyan}" '
-             f'stroke-width="0.7" opacity="0.22"/>')
-    b.append(f'<circle cx="700" cy="146" r="128" fill="none" stroke="{t.blue}" '
-             f'stroke-width="0.6" opacity="0.10"/>')
-    b.append(f'<path d="{edge_d[0]}" fill="none" stroke="{t.cyan}" stroke-width="1.15" '
-             f'opacity="0.80" stroke-linecap="round">{anim("d", loop(edge_d), 22)}</path>')
-    b.append(f'<path d="{dot_d[0]}" fill="none" stroke="{t.green}" stroke-width="4.6" '
+    edge_d, dot_d = wire_frames(verts, edges, 744, 150, 74, math.radians(-16), 26)
+    loop = lambda q: [*q, q[0]]
+    b.append(f'<circle cx="744" cy="150" r="82" fill="none" stroke="{t.cyan}" stroke-width="0.7" opacity="0.20"/>')
+    b.append(f'<path d="{edge_d[0]}" fill="none" stroke="{t.cyan}" stroke-width="1.05" '
+             f'opacity="0.78" stroke-linecap="round">{anim("d", loop(edge_d), 22)}</path>')
+    b.append(f'<path d="{dot_d[0]}" fill="none" stroke="{t.green}" stroke-width="4.2" '
              f'stroke-linecap="round">{anim("d", loop(dot_d), 22)}</path>')
 
-    # Identity
-    b.append(rich(30, 62, [
-        ("\u250c\u2500\u2500(", t.dim), ("osama", t.green), ("@", t.dim), ("github", t.cyan),
-        (")\u2500[", t.dim), ("~", t.blue), ("]", t.dim),
-    ], 12.5))
-    b.append(rich(30, 82, [
-        ("\u2514\u2500", t.dim), ("$", t.green), (" ./profile.sh ", t.bright), ("--render 3d", t.orange),
-    ], 12.5))
+    # Masthead: running heads across the measure, then a hairline.
+    b.append(caps(L, 30, "Osama Anwar", t.text, 8.6, "700"))
+    b.append(caps(212, 30, "Software Engineering", t.dim))
+    b.append(caps(400, 30, "Series 2026 / 02", t.dim))
+    b.append(caps(560, 30, "Build \u00b7 Test \u00b7 Analyze", t.dim))
+    b.append(caps(R, 30, "Pakistan", t.cyan, 8.4, "700", anchor="end"))
+    b.append(rule(L, 40, R, t.text, 0.26))
 
-    b.append(extruded(30, 170, "OSAMA ANWAR", 50, t.bright, "#1E8091", void,
-                      steps=13, spacing=4))
-    b.append(f'<rect x="31" y="194" width="430" height="1" fill="{t.cyan}" opacity="0.45"/>')
-    b.append(rich(31, 216, [
-        ("Software Engineer", t.cyan), ("  \u2571\u2571  ", t.dim),
-        ("Quality Engineering", t.green), ("  \u2571\u2571  ", t.dim),
-        ("Camera / Image IQ", t.yellow),
-    ], 12.5))
-    b.append(rich(31, 234, [
-        ("Database Operations", t.purple), ("  ╱╱  ", t.dim),
-        ("Linux / Systems", t.text), ("  ╱╱  ", t.dim),
-        ("Automation / CLI", t.text),
-    ], 11.5))
+    # Standfirst, set in two short measures like the reference.
+    b.append(caps(L, 62, "Desktop and CLI tooling,", t.dim))
+    b.append(caps(L, 73, "quality engineering, camera IQ", t.dim))
+    b.append(caps(228, 62, "Database operations,", t.dim))
+    b.append(caps(228, 73, "Linux, systems, automation", t.dim))
+    b.append(caps(430, 62, "September 2026", t.dim))
 
-    # HUD strip floating over the grid
-    b.append(f'<rect x="18" y="404" width="{w - 36}" height="48" rx="8" fill="{void}" '
-             f'fill-opacity="0.80" stroke="{t.cyan}" stroke-opacity="0.32" stroke-width="1"/>')
-    chips = [(36, "STATUS", "ONLINE", t.green), (200, "BASE", "PAKISTAN", t.text),
-             (360, "MODE", "BUILD \u00b7 TEST \u00b7 ANALYZE", t.cyan),
-             (632, "REPOS", f"{PUBLIC_REPOS} PUBLIC", t.text)]
-    for x, key, val, colour in chips:
-        b.append(f'<rect x="{x}" y="414" width="2.5" height="28" rx="1.25" fill="{colour}"/>')
-        b.append(text(x + 11, 426, key, t.dim, 9))
-        b.append(text(x + 11, 441, val, colour, 12.5, "600"))
-    b.append(text(w - 34, 441, f"data {SNAPSHOT_DATE}", t.dim, 9, anchor="end"))
+    # The display line.
+    b.append(disp(L - 2, 176, "OSAMA ANWAR", t.bright, 72, "700", spacing=-3))
+    b.append(caps(592, 140, "Est", t.dim))
+    b.append(disp(592, 158, "2021", t.cyan, 15, "700", spacing=-0.4))
+    b.append(caps(592, 176, "Repos", t.dim))
+    b.append(disp(592, 194, f"{PUBLIC_REPOS}", t.cyan, 15, "700", spacing=-0.4))
+    b.append(rule(L, 196, 572, t.text, 0.3))
+
+    # Data band: label over value, the unit the reference is built from.
+    for x, label, value, colour, mono in (
+        (L, "Primary", "Python", t.blue, False),
+        (168, "Systems", "Windows / WSL2 / Linux", t.text, False),
+        (392, "Domains", "QA \u00b7 Camera IQ \u00b7 DB", t.text, False),
+    ):
+        b.append(field(x, 222, label, value, t, colour, mono))
+    b.append(rule(L, 250, 572, t.text, 0.16))
+
+    # Colophon strip over the grid.
+    b.append(f'<rect x="{L - 12}" y="{h - 66}" width="{w - 2 * (L - 12)}" height="46" rx="7" '
+             f'fill="{void}" fill-opacity="0.82" stroke="{t.cyan}" stroke-opacity="0.28"/>')
+    for x, label, value, colour in ((L, "Status", "Online", t.green),
+                                    (196, "Shell", "pwsh / bash", t.text),
+                                    (372, "Render", "Perspective + ISO", t.cyan),
+                                    (604, "Data", SNAPSHOT_DATE, t.text)):
+        b.append(f'<rect x="{x - 10}" y="{h - 56}" width="2.5" height="26" rx="1.25" fill="{colour}"/>')
+        b.append(caps(x, h - 44, label, t.dim, 7.8))
+        b.append(disp(x, h - 30, value, colour, 12, "700", spacing=-0.1))
+
     b.append("</g>")
     b.append(f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="10" fill="none" '
              f'stroke="{t.border}" stroke-width="1"/>')
-
     return svg(w, h, "\n".join(b) + "\n",
-               "Osama Anwar - three dimensional terminal profile header",
-               "A dark 3D scene: a perspective grid receding to the horizon, a rotating "
-               "wireframe icosahedron, and the name Osama Anwar in extruded type above the "
-               "roles Software Engineer, Quality Engineering, and Camera and Image Quality. "
-               f"Status online, based in Pakistan, {PUBLIC_REPOS} public repositories.")
+               "Osama Anwar - technical masthead",
+               "A Swiss-style masthead over a 3D scene: a perspective grid receding to the "
+               "horizon and a rotating wireframe icosahedron. The name Osama Anwar is set "
+               "large in a grotesque, above fields reading Primary Python, Systems Windows, "
+               "WSL2 and Linux, and Domains QA, camera image quality and databases. Based in "
+               f"Pakistan, {PUBLIC_REPOS} public repositories, status online.")
 
 
 # Per-repository size and leading language, snapshot 2026-09-27. This repository
@@ -646,6 +655,89 @@ def fetch_snapshot() -> None:
     print(f"REPO_BLOCKS = {json.dumps(REPO_BLOCKS, indent=4)}\n")
 
 
+# --- Swiss typographic furniture ----------------------------------------------
+
+def disp(x: float, y: float, s: str, fill: str, size: float, weight: str = "700",
+         spacing: float = 0, anchor: str = "start", opacity: float = 1.0) -> str:
+    """Display-face text: the grotesque used for names and section labels."""
+    ls = f' letter-spacing="{spacing}"' if spacing else ""
+    an = f' text-anchor="{anchor}"' if anchor != "start" else ""
+    op = f' opacity="{opacity}"' if opacity < 1 else ""
+    return (f'<text x="{x}" y="{y}" font-family="{DISPLAY}" font-size="{size}" '
+            f'font-weight="{weight}" fill="{fill}"{ls}{an}{op}>{esc(s)}</text>')
+
+
+def caps(x: float, y: float, s: str, fill: str, size: float = 8.4,
+         weight: str = "500", anchor: str = "start") -> str:
+    """The tiny tracked-out uppercase label that carries all the metadata."""
+    return disp(x, y, s.upper(), fill, size, weight, spacing=1.25, anchor=anchor)
+
+
+def rule(x1: float, y: float, x2: float, colour: str, opacity: float = 0.5,
+         width: float = 1) -> str:
+    """A hairline. Swiss layouts are built out of these."""
+    return (f'<line x1="{x1}" y1="{y}" x2="{x2}" y2="{y}" stroke="{colour}" '
+            f'stroke-width="{width}" opacity="{opacity}"/>')
+
+
+def field(x: float, y: float, label: str, value: str, t: Theme,
+          value_colour: str = "", mono: bool = False) -> str:
+    """A label-over-value pair, the unit these layouts are assembled from."""
+    v = value_colour or t.text
+    body = (text(x, y + 15, value, v, 11.5)
+            if mono else disp(x, y + 15, value, v, 12, "700", spacing=0.2))
+    return caps(x, y, label, t.dim) + body
+
+
+# slug, display label, command, scope
+SECTIONS: list[tuple[str, str, str, str]] = [
+    ("whoami", "WHOAMI", "$ whoami", "Identity"),
+    ("neofetch", "NEOFETCH", "$ neofetch", "System"),
+    ("experience", "EXPERIENCE", "$ experience --timeline", "Career"),
+    ("stack", "STACK", "$ stack --inspect", "Technology"),
+    ("languages", "LANGUAGES", "$ languages --scan", "Metrics"),
+    ("matrix", "MATRIX", "$ repo --matrix", "Repositories"),
+    ("projects", "PROJECTS", "$ projects --list", "Work"),
+    ("inspect", "INSPECT", "$ project inspect", "camera-count-tool"),
+    ("qa", "QUALITY", "$ qa --profile", "Testing"),
+    ("camera", "CAMERA", "$ camera --diagnostics", "Image quality"),
+    ("db", "DATABASE", "$ db --status", "Oracle"),
+    ("security", "SECURITY", "$ security --environment", "Linux"),
+    ("tools", "TOOLS", "$ tools --inventory", "Toolchain"),
+    ("image", "IMAGE", "$ image --profile", "Photography"),
+    ("workflow", "WORKFLOW", "$ workflow --execute", "Pipeline"),
+    ("credentials", "CREDENTIALS", "$ credentials --list", "Education"),
+    ("contact", "CONTACT", "$ contact --connect", "Links"),
+]
+
+
+def build_section(t: Theme, index: int, label: str, command: str, scope: str) -> str:
+    """One section masthead: running head, rules, display label, metadata fields."""
+    w, h = 880, 88
+    void = "#04070C" if t.name == "dark" else "#05090F"
+    L, R = 26, w - 26
+    b = [f'<rect width="{w}" height="{h}" rx="8" fill="{void}"/>']
+
+    b.append(caps(L, 20, f"Section {index:02d}", t.cyan, 8.2, "700"))
+    b.append(caps(196, 20, "Osama Anwar", t.dim))
+    b.append(caps(R, 20, "Profile / 2026", t.dim, 8.4, "500", anchor="end"))
+    b.append(rule(L, 28, R, t.text, 0.22))
+
+    b.append(disp(L - 1, 66, label, t.bright, 31, "700", spacing=-1.1))
+
+    b.append(caps(530, 50, "Command", t.dim, 7.8))
+    b.append(text(530, 66, command, t.cyan, 11.5))
+    b.append(caps(732, 50, "Scope", t.dim, 7.8))
+    b.append(disp(732, 66, scope, t.text, 12, "700", spacing=-0.1))
+
+    b.append(rule(L, 78, R, t.text, 0.14))
+    b.append(f'<rect x="{L - 10}" y="40" width="2.5" height="30" rx="1.25" fill="{t.cyan}" opacity="0.85"/>')
+    b.append(f'<rect x="0.5" y="0.5" width="{w - 1}" height="{h - 1}" rx="8" fill="none" '
+             f'stroke="{t.border}" stroke-width="1"/>')
+
+    return svg(w, h, "\n".join(b) + "\n", f"{command}",
+               f"Section {index}: {label.title()}. Command {command}. Scope {scope}.")
+
 BUILDERS = {
     "header": build_header,
     "fastfetch": build_fastfetch,
@@ -668,6 +760,15 @@ def main() -> None:
             path.write_text(builder(theme), encoding="utf-8")
             print(f"  wrote {path.name:<26}{path.stat().st_size / 1024:6.1f} KB")
 
+    total = 0
+    for i, (slug, label, command, scope) in enumerate(SECTIONS, 1):
+        for theme in (DARK, LIGHT):
+            path = OUT / f"sec-{slug}-{theme.name}.svg"
+            path.write_text(build_section(theme, i, label, command, scope), encoding="utf-8")
+            total += path.stat().st_size
+    print(f"  wrote {len(SECTIONS) * 2} section mastheads    {total / 1024:6.1f} KB")
+
 
 if __name__ == "__main__":
     main()
+

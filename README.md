@@ -4,7 +4,7 @@
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
   <img src="assets/header-dark.svg" width="100%"
-       alt="Osama Anwar - Software Engineer, Quality Engineering, Camera and Image Evaluation, Database Operations. Based in Pakistan, 32 public repositories.">
+       alt="Osama Anwar - Software Engineer, Quality Engineering, Camera and Image Evaluation, Database Operations. A 3D scene with a perspective grid and a rotating wireframe icosahedron. Based in Pakistan, 32 public repositories.">
 </picture>
 
 </div>
@@ -36,7 +36,7 @@ is the whole picture.
   <source media="(prefers-color-scheme: dark)" srcset="assets/fastfetch-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/fastfetch-light.svg">
   <img src="assets/fastfetch-dark.svg" width="100%"
-       alt="System panel: Windows 11, WSL2 and Linux. PowerShell and bash. Database Administrator at The Bank of Punjab; previously Camera and Image Evaluation Engineer. 32 public repositories, 500 tracked files. Languages Python, HTML, CSS, JavaScript, Inno Setup.">
+       alt="System panel beside a wireframe torus rendered in 3D. Windows 11, WSL2 and Linux. PowerShell and bash. Database Administrator at The Bank of Punjab; previously Camera and Image Evaluation Engineer. 32 public repositories, 500 tracked files. Languages Python, HTML, CSS, JavaScript, Inno Setup.">
 </picture>
 
 ## `$ experience --timeline`
@@ -129,15 +129,36 @@ QUALITY · BUILD · RELEASE
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
   <img src="assets/languages-dark.svg" width="100%"
-       alt="Language distribution. By volume: Python 93.02 percent, HTML 4.72, CSS 1.29, JavaScript 0.82, Inno Setup 0.16. By breadth, repositories where the language leads: Python 11, HTML 9, JavaScript 6, CSS 2.">
+       alt="Two isometric podiums. By volume, log scaled: Python 93.02 percent at 1,513,981 bytes, HTML 4.72, CSS 1.29, JavaScript 0.82, Inno Setup 0.16. By breadth, repositories where the language leads: Python 11, HTML 9, JavaScript 6, CSS 2.">
 </picture>
 
-**Method.** Both charts are generated from the GitHub REST API — `/repos/{owner}/{repo}/languages`
-summed over every public repository in this account, snapshot `2026-09-27`. *Volume* is raw
-bytes as classified by GitHub Linguist. *Breadth* counts the repositories in which a language
-is the largest, because volume is dominated by two large projects and would otherwise hide
-everything else. Neither chart is a proficiency score, and no number on this page is hand-written
-— see [`assets/build_assets.py`](assets/build_assets.py).
+**Method.** Both podiums come from the GitHub REST API — `/repos/{owner}/{repo}/languages`
+summed across the account, snapshot `2026-09-27`. *Volume* is raw bytes as classified by GitHub
+Linguist, drawn on a **log₁₀ scale** so all five languages stay legible, with the exact byte
+counts and linear percentages printed beneath each solid. *Breadth* counts the repositories in
+which a language is the largest, because volume is dominated by two projects and would otherwise
+hide everything else.
+
+**This repository is excluded from its own statistics.** Its generator is Python, so counting it
+would let the profile inflate the very numbers it publishes. Neither podium is a proficiency
+score, and no number on this page is hand-written — see
+[`assets/build_assets.py`](assets/build_assets.py).
+
+## `$ repo --matrix`
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/matrix-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/matrix-light.svg">
+  <img src="assets/matrix-dark.svg" width="100%"
+       alt="An isometric field of 31 solids, one per public repository, each coloured by its leading language and raised to the log of its byte count. The two tallest are Network-Analyzer at 920,091 bytes and camera-count-tool at 452,139 bytes.">
+</picture>
+
+Every public repository as one solid: **colour is its leading language, height is log₁₀ of its
+bytes.** The two towers at the back are `Network-Analyzer` (920,091 B) and `camera-count-tool`
+(452,139 B) — together they are 84% of all the code in the account, which is why the language
+chart above needs a log scale to say anything useful. The three flat grey plates are repositories
+with no classified code. Projected through
+[`assets/geom3d.py`](assets/geom3d.py), not drawn by hand.
 
 ## `$ projects --list`
 
@@ -385,7 +406,7 @@ repositories are what it turned into.
   <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/pipeline-light.svg">
   <img src="assets/pipeline-dark.svg" width="100%"
-       alt="Seven stage pipeline: spec, build, test, measure, debug, verify, ship, with a dashed regression path returning from verify to build.">
+       alt="Seven isometric blocks in a row: spec, build, test, measure, debug, verify, ship, with a dashed regression path returning from verify to build.">
 </picture>
 
 ## `$ credentials --list`

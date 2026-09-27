@@ -45,9 +45,11 @@ def ghost(d: Doc, x: float, y: float, w: float, idx: str, code: str, title: str,
 
 
 def build_hero() -> Doc:
-    d = Doc(452, "Osama Anwar — engineering dossier",
+    d = Doc(482, "Osama Anwar — engineering dossier",
             "Mobile layout. The active record reads Osama Anwar, operator, software engineer, "
-            "Pakistan: 32 public repositories, five languages, Python 93 percent of code.",
+            "Pakistan: 32 public repositories, five languages, Python 93 percent of code. "
+            "Neighbouring records, newest first: Database Administrator from 2026, Camera and "
+            "Image Evaluation Engineer from 2025, IT internship 2025.",
             w=W)
     d.defs.append(f'<clipPath id="stack"><rect x="25" y="31" width="{W - 26}" '
                   f'height="{d.h - 32}"/></clipPath>')
@@ -65,7 +67,7 @@ def build_hero() -> Doc:
     ghost(d, 44, ay + ah + 10, W - 60, "02", "IQ", "camera / image eval", "2025")
     d.add("</g>")
     d.add(f'<g filter="url(#{far})" opacity="0.28">')
-    ghost(d, 44, ay - 188, W - 60, "03", "ED", "bsc software eng.", "2024")
+    ghost(d, 44, ay + ah + 104, W - 60, "03", "IT", "it internship", "2025")
     d.add("</g>")
 
     x, w = 30, W - 40
@@ -77,7 +79,7 @@ def build_hero() -> Doc:
     tick_rule(d, lx, ay + 56, w - (lx - x) - 14)
     d.text(lx, ay + 100, "OSAMA ANWAR", 34, TEXT, "heavy", spacing=-1)
     micro(d, lx, ay + 118, "loc", "PAKISTAN")
-    micro(d, lx + 96, ay + 118, "since", "2021-11-03")
+    micro(d, lx + 96, ay + 118, "github", "joined 2021-11-03")
     stat_cell(d, x + 14, ay + 146, w - 28, ("statistics", "profile"),
               [("repos", str(DATA["public_repos"]), TEXT),
                ("langs", str(len(DATA["lang_bytes"])), TEXT), ("status", "online", ACCENT)])
@@ -262,7 +264,8 @@ def build_experience() -> Doc:
                 ty += 18
                 d.text(lx, ty, org, 11, SLATE, "medium")
             ty += 18
-            micro(d, lx, ty, "period", period, value_fill=TEXT if current else TEXT_2)
+            micro(d, lx, ty, "period" if "—" in period else "year", period,
+                  value_fill=TEXT if current else TEXT_2)
             for b in wrapped:
                 ty += 3
                 for j, ln in enumerate(b):

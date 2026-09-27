@@ -46,7 +46,7 @@ SYSTEM = [
     ("focus", "CLI tooling · desktop apps · diagnostics", True),
     ("domains", "SQA · mobile / web · camera IQ · database ops", False),
     ("repos", f"{DATA['public_repos']} public · {DATA['tracked_files']} files measured", True),
-    ("uptime", "since 2021-11-03", False),
+    ("uptime", "on GitHub since 2021-11-03", False),
 ]
 
 TIERS = {"primary": 3, "working": 2, "familiar": 1}
@@ -83,24 +83,27 @@ STACK = [
                   ("Linux / WSL2", False)]),
 ]
 
+# Newest first by last update, the same rule as the repository index.
 # name, badge code, record key, one-line description, micro-labels, documented stage
 PROJECTS = [
     ("camera-count-tool", "CC", "CCT", "Exact shutter count from a documented source, or none.",
      [("stack", "Python 3.12 · PySide6 · Typer · SQLite"), ("os", "Windows 10/11")], "alpha"),
     ("Network-Analyzer", "NA", "NETAN", "Windows network analyzer: Wi-Fi, discovery, diagnostics.",
      [("stack", "Python · argparse CLI · psutil"), ("os", "Windows 10/11")], ""),
+    ("ascii-Art", "AA", "ASCII", "Image, video and webcam to ASCII, with a GPU path.",
+     [("stack", "Python · OpenCV · CuPy · Numba")], ""),
     ("HackingMonitor", "HM", "HKMON", "Live packet classifier: SYN flood, port scan, ICMP probe.",
      [("stack", "Python · Scapy · Flask + Socket.IO"), ("live", "hacking-monitor.vercel.app")],
      ""),
-    ("ascii-Art", "AA", "ASCII", "Image, video and webcam to ASCII, with a GPU path.",
-     [("stack", "Python · OpenCV · CuPy · Numba")], ""),
     ("The-Media-Enhancer", "ME", "MENH", "Desktop 4x image and video upscaler.",
      [("stack", "Python · PyTorch · OpenCV · Tkinter")], ""),
     ("3D_AppImage", "3D", "3DAPP", "Single photo to a 3D view via MiDaS depth estimation.",
      [("stack", "Python · Streamlit · PyTorch · timm")], ""),
 ]
 
-# Reverse-chronological by end date.
+# One rule for every year shown on a record: the badge is the START year, and
+# records run newest first by start year (ties: the one that ended later first).
+# Full periods are always printed beside the badge.
 EXPERIENCE = [
     ("26", "DB", "role", "database administrator", "The Bank of Punjab", "2026 — now",
      ["Oracle production and staging: health, performance, capacity, availability",
@@ -110,13 +113,14 @@ EXPERIENCE = [
      ["Camera validation and regression on physical devices and in software",
       "Exposure, colour, dynamic range, noise; defects to closure via Jira"], False),
     ("25", "IT", "intern", "it internship", "KP Board of Investment", "2025", [], False),
-    ("24", "ED", "edu", "bsc software engineering", "Iqra National University", "2020 — 2024",
-     ["CGPA 3.21"], False),
     ("23", "FL", "intern", "flutter development internship", "", "2023", [], False),
     ("23", "MW", "training", "mobile / web development", "SMIT", "2023", [], False),
     ("21", "AW", "award", "huawei next image award", "Pakistan National Winner", "2021", [],
      False),
+    ("20", "ED", "edu", "bsc software engineering", "Iqra National University", "2020 — 2024",
+     ["CGPA 3.21"], False),
 ]
+
 
 AXES = ["exposure", "colour accuracy", "white balance", "dynamic range", "noise",
         "detail", "optical behaviour", "consistency", "regression"]

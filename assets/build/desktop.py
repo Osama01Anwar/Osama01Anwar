@@ -16,9 +16,10 @@ def build_hero() -> Doc:
     d = Doc(470, "Osama Anwar — engineering dossier",
             "A records interface in orange and slate. The active record reads Osama Anwar, "
             "operator, software engineer, Pakistan: 32 public repositories, five languages, "
-            "Python 93 percent of code. Adjacent records, out of focus, list Database "
-            "Administrator at The Bank of Punjab, Camera and Image Evaluation Engineer at "
-            "Transsion and Carlcare, and a BSc in Software Engineering.")
+            "Python 93 percent of code. Adjacent records, out of focus and newest first, list "
+            "Database Administrator at The Bank of Punjab from 2026, Camera and Image Evaluation "
+            "Engineer at Transsion and Carlcare from 2025, and an IT internship at KP Board of "
+            "Investment in 2025.")
     d.defs.append(f'<clipPath id="stack"><rect x="39" y="37" width="{W - 40}" '
                   f'height="{d.h - 38}"/></clipPath>')
     far, near = blur(d, "far", 2.4), blur(d, "near", 1.3)
@@ -38,23 +39,25 @@ def build_hero() -> Doc:
     record(d, ix, ay - H - GAP, iw, H, False, "01", "DB", "role", "database administrator",
            "2026", [("org", "The Bank of Punjab"), ("env", "Oracle prod / staging")],
            (("statistics", "operations"),
-            [("scope", "dba", TEXT_2), ("env", "oracle", TEXT_2), ("since", "2026", TEXT_2)]),
+            [("scope", "dba", TEXT_2), ("from", "2026", TEXT_2), ("to", "now", TEXT_2)]),
            stub_x=58)
     record(d, ix, ay + H + GAP, iw, H, False, "02", "IQ", "role", "camera / image evaluation",
            "2025", [("org", "Transsion / Carlcare"), ("mode", "validation + regression")],
            (("statistics", "camera"),
-            [("axes", "9", TEXT_2), ("scope", "iq", TEXT_2), ("to", "2026", TEXT_2)]),
+            [("scope", "iq", TEXT_2), ("from", "2025", TEXT_2), ("to", "2026", TEXT_2)]),
            stub_x=58)
     d.add("</g>")
     d.add(f'<g filter="url(#{far})" opacity="0.3">')
-    record(d, ix, ay + 2 * (H + GAP), iw, H, False, "03", "ED", "edu",
-           "bsc software engineering", "2024", [("inst", "Iqra National University")], None,
+    record(d, ix, ay + 2 * (H + GAP), iw, H, False, "03", "IT", "intern", "it internship",
+           "2025", [("org", "KP Board of Investment")],
+           (("statistics", "internship"),
+            [("scope", "it", TEXT_2), ("from", "2025", TEXT_2), ("to", "2025", TEXT_2)]),
            stub_x=58)
     d.add("</g>")
 
     record(d, 62, ay, W - 80, H, True, "00", "OA", "operator", "software engineer",
            "OSAMA ANWAR",
-           [("loc", "PAKISTAN"), ("since", "2021-11-03"), ("focus", "QA · CAMERA IQ · DB")],
+           [("loc", "PAKISTAN"), ("github", "joined 2021-11-03")],
            (("statistics", "profile"),
             [("repos", str(DATA["public_repos"]), TEXT),
              ("langs", str(len(DATA["lang_bytes"])), TEXT),
@@ -275,7 +278,7 @@ def build_experience() -> Doc:
             ly += 20
             d.text(lx, ly, "→", 12, ACCENT, "bold")
             d.text(lx + 20, ly, ln, 12, TEXT_2, "regular")
-        micro(d, W - 44, y + 22, "period", anchor="end")
+        micro(d, W - 44, y + 22, "period" if "—" in period else "year", anchor="end")
         d.text(W - 44, y + 42, period, 13, TEXT if current else TEXT_2, "bold", anchor="end")
         y += hh + 10
     frame(d)

@@ -1,0 +1,327 @@
+{
+  "snapshot": "2026-09-27",
+  "public_repos": 32,
+  "measured_repos": 31,
+  "tracked_files": 499,
+  "lang_bytes": {
+    "Python": 1513981,
+    "HTML": 76776,
+    "CSS": 20960,
+    "JavaScript": 13333,
+    "Inno Setup": 2612
+  },
+  "lang_leads": {
+    "Python": 11,
+    "HTML": 9,
+    "JavaScript": 6,
+    "CSS": 2
+  },
+  "featured": {
+    "camera-count-tool": {
+      "description": "Reads the exact shutter/actuation count of a camera from an authoritative, cited source - or reports it as unavailable. Never estimates. Windows, offline, read-only.",
+      "pushed": "2026-09-16",
+      "license": "apache-2.0",
+      "homepage": "",
+      "files": 156,
+      "tests": 20,
+      "bytes": 452139,
+      "languages": {
+        "Python": 449527,
+        "Inno Setup": 2612
+      }
+    },
+    "Network-Analyzer": {
+      "description": "Professional Windows 10/11 network analyzer built with Python, providing real-time network monitoring, Wi-Fi analysis, device discovery, diagnostics, speed testing, reporting, and network health monitoring.",
+      "pushed": "2026-08-12",
+      "license": "other",
+      "homepage": "",
+      "files": 166,
+      "tests": 22,
+      "bytes": 920091,
+      "languages": {
+        "Python": 920091
+      }
+    },
+    "HackingMonitor": {
+      "description": "",
+      "pushed": "2026-03-01",
+      "license": "",
+      "homepage": "https://hacking-monitor.vercel.app",
+      "files": 3,
+      "tests": 0,
+      "bytes": 21794,
+      "languages": {
+        "HTML": 19550,
+        "Python": 2244
+      }
+    },
+    "ascii-Art": {
+      "description": "",
+      "pushed": "2026-04-25",
+      "license": "",
+      "homepage": "",
+      "files": 17,
+      "tests": 0,
+      "bytes": 45269,
+      "languages": {
+        "Python": 45269
+      }
+    },
+    "The-Media-Enhancer": {
+      "description": "This application is a desktop tool for upscaling images and videos by 4x, built using Python, Tkinter (for the GUI), and OpenCV.",
+      "pushed": "2026-02-06",
+      "license": "",
+      "homepage": "",
+      "files": 2,
+      "tests": 0,
+      "bytes": 8006,
+      "languages": {
+        "Python": 8006
+      }
+    },
+    "3D_AppImage": {
+      "description": "",
+      "pushed": "2025-11-01",
+      "license": "",
+      "homepage": "",
+      "files": 2,
+      "tests": 0,
+      "bytes": 16412,
+      "languages": {
+        "Python": 16412
+      }
+    }
+  },
+  "commits": [
+    {
+      "date": "2026-09-16",
+      "repo": "camera-count-tool",
+      "sha": "9c4ff63",
+      "message": "fix: treat a manufacturer's own editor as an editor"
+    },
+    {
+      "date": "2026-08-12",
+      "repo": "Network-Analyzer",
+      "sha": "3a65a5a",
+      "message": "Initial commit: Windows Network Analyzer"
+    },
+    {
+      "date": "2026-02-21",
+      "repo": "instamonitor",
+      "sha": "3b421b4",
+      "message": "Initial commit"
+    },
+    {
+      "date": "2026-06-08",
+      "repo": "Architecture",
+      "sha": "16e8692",
+      "message": "Update with ultra-detailed architecture overview including all project breakdowns, data flows, tech stacks, and comprehensive feature descriptions"
+    },
+    {
+      "date": "2026-04-25",
+      "repo": "ascii-Art",
+      "sha": "1b013e5",
+      "message": "Add files via upload"
+    },
+    {
+      "date": "2026-04-24",
+      "repo": "ascii_art",
+      "sha": "711d3b1",
+      "message": "Merge branch 'main' of https://github.com/Osama01Anwar/ascii_art"
+    },
+    {
+      "date": "2026-03-01",
+      "repo": "HackingMonitor",
+      "sha": "f74226e",
+      "message": "Add files via upload"
+    }
+  ],
+  "repos": [
+    {
+      "name": "camera-count-tool",
+      "pushed": "2026-09-16",
+      "bytes": 452139,
+      "lang": "Python"
+    },
+    {
+      "name": "Network-Analyzer",
+      "pushed": "2026-08-12",
+      "bytes": 920091,
+      "lang": "Python"
+    },
+    {
+      "name": "instamonitor",
+      "pushed": "2026-07-27",
+      "bytes": 0,
+      "lang": ""
+    },
+    {
+      "name": "Architecture",
+      "pushed": "2026-06-08",
+      "bytes": 0,
+      "lang": ""
+    },
+    {
+      "name": "ascii-Art",
+      "pushed": "2026-04-25",
+      "bytes": 45269,
+      "lang": "Python"
+    },
+    {
+      "name": "ascii_art",
+      "pushed": "2026-04-24",
+      "bytes": 36898,
+      "lang": "Python"
+    },
+    {
+      "name": "HackingMonitor",
+      "pushed": "2026-03-01",
+      "bytes": 21794,
+      "lang": "HTML"
+    },
+    {
+      "name": "spam_detetction",
+      "pushed": "2026-02-21",
+      "bytes": 6341,
+      "lang": "Python"
+    },
+    {
+      "name": "The-Media-Enhancer",
+      "pushed": "2026-02-06",
+      "bytes": 8006,
+      "lang": "Python"
+    },
+    {
+      "name": "CodeCheck---python",
+      "pushed": "2026-01-19",
+      "bytes": 8701,
+      "lang": "Python"
+    },
+    {
+      "name": "flight-weather-tracker",
+      "pushed": "2026-01-16",
+      "bytes": 17439,
+      "lang": "HTML"
+    },
+    {
+      "name": "CalcultorApp",
+      "pushed": "2025-11-01",
+      "bytes": 0,
+      "lang": ""
+    },
+    {
+      "name": "3D_AppImage",
+      "pushed": "2025-11-01",
+      "bytes": 16412,
+      "lang": "Python"
+    },
+    {
+      "name": "SpecTest",
+      "pushed": "2025-11-01",
+      "bytes": 12099,
+      "lang": "Python"
+    },
+    {
+      "name": "Internet-Speed-Test",
+      "pushed": "2025-03-24",
+      "bytes": 5348,
+      "lang": "Python"
+    },
+    {
+      "name": "SpamTextClassifier",
+      "pushed": "2024-06-06",
+      "bytes": 3045,
+      "lang": "Python"
+    },
+    {
+      "name": "DUI",
+      "pushed": "2024-05-08",
+      "bytes": 1826,
+      "lang": "JavaScript"
+    },
+    {
+      "name": "QUIZZZZ",
+      "pushed": "2024-05-06",
+      "bytes": 7060,
+      "lang": "JavaScript"
+    },
+    {
+      "name": "FbClone",
+      "pushed": "2024-03-25",
+      "bytes": 12130,
+      "lang": "CSS"
+    },
+    {
+      "name": "OnClickEvent",
+      "pushed": "2024-02-27",
+      "bytes": 984,
+      "lang": "HTML"
+    },
+    {
+      "name": "10Assignments",
+      "pushed": "2024-01-29",
+      "bytes": 9224,
+      "lang": "HTML"
+    },
+    {
+      "name": "BMI-Calculator",
+      "pushed": "2024-01-22",
+      "bytes": 2375,
+      "lang": "JavaScript"
+    },
+    {
+      "name": "SimpleDrivingLicenseCheck",
+      "pushed": "2024-01-22",
+      "bytes": 1247,
+      "lang": "JavaScript"
+    },
+    {
+      "name": "SimpleToDo",
+      "pushed": "2024-01-22",
+      "bytes": 1846,
+      "lang": "HTML"
+    },
+    {
+      "name": "Calculator",
+      "pushed": "2024-01-21",
+      "bytes": 4946,
+      "lang": "JavaScript"
+    },
+    {
+      "name": "Clock",
+      "pushed": "2024-01-21",
+      "bytes": 1908,
+      "lang": "JavaScript"
+    },
+    {
+      "name": "DiceGame",
+      "pushed": "2024-01-21",
+      "bytes": 4268,
+      "lang": "CSS"
+    },
+    {
+      "name": "Architecturee",
+      "pushed": "2023-10-22",
+      "bytes": 11716,
+      "lang": "HTML"
+    },
+    {
+      "name": "WebPage",
+      "pushed": "2023-10-15",
+      "bytes": 4674,
+      "lang": "HTML"
+    },
+    {
+      "name": "MY_CV",
+      "pushed": "2023-10-09",
+      "bytes": 2884,
+      "lang": "HTML"
+    },
+    {
+      "name": "Timetable",
+      "pushed": "2023-10-09",
+      "bytes": 6992,
+      "lang": "HTML"
+    }
+  ]
+}
